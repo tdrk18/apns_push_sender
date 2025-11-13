@@ -19,7 +19,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
         g++ \
         pkg-config \
         libev-dev \
-        libssl-dev  && \
+        libssl-dev \
+        libpsl-dev && \
     cd /usr/local/src/ && \
     git clone https://github.com/tatsuhiro-t/nghttp2.git && \
     cd ./nghttp2/ && \
