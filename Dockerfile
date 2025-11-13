@@ -1,6 +1,6 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
-ARG CURL_VERSION="7.64.1"
+ARG CURL_VERSION="8.17.0"
 ENV TZ=Asia/Tokyo
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
@@ -15,7 +15,12 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
         autotools-dev \
         libtool \
         pkg-config \
-        libssl-dev && \
+        libssl-dev \
+        g++ \
+        pkg-config \
+        libev-dev \
+        libssl-dev \
+        libpsl-dev && \
     cd /usr/local/src/ && \
     git clone https://github.com/tatsuhiro-t/nghttp2.git && \
     cd ./nghttp2/ && \
