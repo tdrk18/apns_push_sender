@@ -1,6 +1,6 @@
 FROM ubuntu:24.04
 
-ARG CURL_VERSION="7.64.1"
+ARG CURL_VERSION="8.17.0"
 ENV TZ=Asia/Tokyo
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
