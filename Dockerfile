@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 
 ARG CURL_VERSION="8.17.0"
 ENV TZ=Asia/Tokyo
